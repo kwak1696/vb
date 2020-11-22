@@ -1,0 +1,13 @@
+ÿPrivate Sub Command1_Click()
+    input_data = Val(Text2.Text)
+    output_data = hamsu(input_data)
+    Text1.Text = "= " & output_data
+End Sub
+
+Function hamsu(x)
+    If x = 1 Then
+        hamsu = 1
+    Else
+        hamsu = x * hamsu(x - 1)
+    End If
+End Function
